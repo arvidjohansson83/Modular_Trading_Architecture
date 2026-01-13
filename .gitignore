@@ -1,0 +1,49 @@
+# -------------------------
+# Python (Backtester)
+# -------------------------
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.env
+.venv/
+venv/
+
+# -------------------------
+# VS Code
+# -------------------------
+.vscode/
+
+# -------------------------
+# MT5 / MQL5
+# -------------------------
+# Compiled files
+*.ex5
+*.ex4
+
+# Source files you DO want to track:
+ *.mq5  <-- DO NOT ignore this (your source code!)
+ *.mqh  <-- DO NOT ignore this
+
+# Terminal data files
+*.hst
+*.log
+
+# Strategy Tester cache
+tester/*.xml
+tester/cache/
+tester/files/
+tester/logs/
+
+# -------------------------
+# Backtesting Data
+# -------------------------
+*.csv
+*.set
+
+# -------------------------
+# OS / Misc
+# -------------------------
+.DS_Store
+Thumbs.db
