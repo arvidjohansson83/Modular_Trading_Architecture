@@ -7,7 +7,7 @@
 
 ![Trend Module Example – GBPJPY](IMG_20251215_trend_example_gbpjpy.jpg)
 
-_The first position captures the initial impulse (TP‑leg), while the second position remains active until a structural reversal triggers the stop loss._
+_The first position captures the initial impulse (TP‑leg), while the second position remains active until several hours later, when a structural reversal triggers the stop loss._
 
 ---
 
@@ -59,10 +59,11 @@ In this trade, fallback control confirmed:
 
 ```text
 TP/SL logic for GBPJPY
-TP progress for trend position
+TP progress for trend position = 498,49%
 Fallback control: savedTPLevel=207.990, SL=207.318, Entry=208.189, SLMoved=true
 ADX value after TP exit: 33.51
 ```
+*Note: TP progress reflects the distance from the TP‑leg’s predefined TP level — this is how the trend module quantifies extended structural continuation.*
 
 ---
 
@@ -86,6 +87,7 @@ This GBPJPY sell trade demonstrates the trend module’s live behavior:
 - **ATR‑based trailing** adjusts SL downward only when justified  
 - **ADX provides context**, not exit signals  
 - **Exit occurs on structural break**, not indicator noise  
+- **TP progress reached almost 500%**, showing extended continuation
 
 This example shows exactly how the trend module behaves in real market conditions:  
 **disciplined, deterministic, and structurally driven.**
