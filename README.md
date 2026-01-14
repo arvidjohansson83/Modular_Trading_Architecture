@@ -18,6 +18,21 @@ The goal is to provide a clear, professional architecture suitable for systemati
 
 ---
 
+## 📊 Empirical Foundation
+
+All logic in this framework is based on historical statistics and extensive backtesting.
+No module is implemented until its behaviour has been validated across multiple years of data and a broad set of symbols.
+
+Forex modules use a fixed 1:1 risk/reward, which has shown stable behaviour across 50+ weekly symbol tests.
+
+Index modules operate with multiple reward levels. Lower reward structures (e.g., 0.4:1) have historically shown high hit‑rates on indices such as US30 and DAX40.
+
+These observations led to the development of a custom Python backtester, designed to empirically validate alternative reward levels and explore how edges evolve under different volatility regimes.
+
+This is an ongoing research process, and the architecture evolves as new statistical patterns are confirmed.
+
+---
+
 ## 📐 High-Level Architecture
 
 The system is composed of several independent modules, each responsible for a specific part of the execution pipeline.  
@@ -93,6 +108,7 @@ The framework is built around:
 - **Reproducibility** — live and backtest logic share the same structure  
 - **Transparency** — all decisions are logged and traceable  
 - **Scalability** — multi‑symbol execution without code duplication  
+- **Empirical validation** — every module is grounded in statistical evidence
 
 These principles guide both the MQL5 implementation and the Python backtester.
 
