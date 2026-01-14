@@ -22,9 +22,9 @@ venv/
 *.ex5
 *.ex4
 
-# Source files you DO want to track:
- *.mq5  <-- DO NOT ignore this (your source code!)
- *.mqh  <-- DO NOT ignore this
+# Source files
+ *.mq5  
+ *.mqh
 
 # Terminal data files
 *.hst
