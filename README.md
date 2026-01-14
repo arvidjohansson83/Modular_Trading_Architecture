@@ -53,6 +53,7 @@ The README focuses on navigation and usage rather than repeating those details.
 
 ## 📁 Repository Structure
 
+```text
 /src
   main.mq5
   /session_module
@@ -74,7 +75,7 @@ The README focuses on navigation and usage rather than repeating those details.
 
 /docs/examples
   trend_module_execution_gbpjpy.md
-
+```
 
 Each document is self‑contained and focuses on a single part of the system.
 
