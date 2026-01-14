@@ -54,26 +54,27 @@ The README focuses on navigation and usage rather than repeating those details.
 ## 📁 Repository Structure
 
 /src
-main.mq5
-/session_module
-/trend_module
-/shared
-/utils
+  main.mq5
+  /session_module
+  /trend_module
+  /shared
+  /utils
 
 /backtester
-python engine for historical simulation
+  Python engine for historical simulation
 
 /docs
-architecture_overview.md
-session_module.md
-trend_module.md
-backtester.md
-risk_model.md
-inputs_overview.md
-logging_and_debugging.md
+  architecture_overview.md
+  session_module.md
+  trend_module.md
+  backtester.md
+  risk_model.md
+  inputs_overview.md
+  logging_and_debugging.md
 
 /docs/examples
-trend_module_execution_gbpjpy.md
+  trend_module_execution_gbpjpy.md
+
 
 Each document is self‑contained and focuses on a single part of the system.
 
