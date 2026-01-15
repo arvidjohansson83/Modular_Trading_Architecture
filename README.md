@@ -74,7 +74,6 @@ The README focuses on navigation and usage rather than repeating those details.
   logging_and_debugging.md
 
 /docs/examples
-  trend_module_execution_gbpjpy.md
 ```
 
 Each document is self‑contained and focuses on a single part of the system.
