@@ -85,10 +85,7 @@ Each document is self‑contained and focuses on a single part of the system.
 
 Live examples are included to illustrate how the system behaves under real market conditions.
 
-See:  
-`/docs/examples/`
-
-Additional examples will be added over time.
+See:  `/docs/examples/`
 
 ---
 
