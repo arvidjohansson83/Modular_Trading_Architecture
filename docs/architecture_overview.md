@@ -103,6 +103,7 @@ Risk models, parameters, and logic are fully documented and traceable.
 
 ## Repository Structure
 
+```text
 /src
 /backtester         → Python backtesting engine
 /session_module     → Session logic (premarket range, pending orders)
@@ -118,5 +119,6 @@ risk_model.md
 inputs_overview.md
 logging_and_debugging.md
 /examples           → Strategy examples, logs, walkthroughs
+```
 
 This structure ensures clarity, maintainability, and ease of navigation for both developers and reviewers.
