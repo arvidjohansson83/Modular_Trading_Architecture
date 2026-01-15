@@ -85,17 +85,8 @@ Each document is self‑contained and focuses on a single part of the system.
 
 Live examples are included to illustrate how the system behaves under real market conditions.
 
-### Example: GBPJPY Trend Execution  
-Demonstrates:
-
-- two‑position entry structure  
-- structural trailing  
-- fallback validation  
-- deterministic SL adjustments  
-- ADX context logging  
-
 See:  
-`/docs/examples/trend_module_execution_gbpjpy.md`
+`/docs/examples/`
 
 Additional examples will be added over time.
 
