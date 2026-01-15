@@ -52,12 +52,12 @@ The backtester replicates the EA’s session behavior:
 - User selects between STOP or LIMIT order type to backtest
 - Applies the same directional logic as the EA:
 
-´´´text
+```text
 STOP + EMA_fast > EMA_slow → Buy Stop
 STOP + EMA_fast < EMA_slow → Sell Stop
 LIMIT + EMA_fast > EMA_slow → Sell Limit
 LIMIT + EMA_fast < EMA_slow → Buy Limit
-´´´
+```
 
 The engine then simulates order execution bar‑by‑bar using historical OHLC data.
 
