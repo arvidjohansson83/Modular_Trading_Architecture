@@ -118,7 +118,8 @@ backtester.md
 risk_model.md
 inputs_overview.md
 logging_and_debugging.md
-/examples           → Strategy examples, logs, walkthroughs
+
+/docs/examples         → Strategy examples, logs, walkthroughs
 ```
 
 This structure ensures clarity, maintainability, and ease of navigation for both developers and reviewers.
