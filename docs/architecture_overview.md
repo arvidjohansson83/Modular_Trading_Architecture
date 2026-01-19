@@ -27,29 +27,7 @@ The session module acts as the **entry point** for all trades and establishes th
 
 ---
 
-### **2. Trend Module**
-
-The trend module extends the session module with a structured, two‑position architecture designed to capture both immediate movement and extended trends. 
-
-Core features: 
-- **Two independent positions** (TP‑leg and trend‑leg) 
-- **Split‑risk allocation** with deterministic sizing 
-- **Structural trailing logic** based on break‑of‑structure (BOS) events 
-- **5‑minute update cycle** for controlled, non‑reactive adjustments 
-- **Fallback validation** to ensure safe state transitions 
-- **ADX‑based contextual logging** (context only, not decision‑making) 
-
-Technical characteristics: 
-- Fully deterministic trailing behaviour 
-- Symbol‑agnostic logic that adapts to volatility without curve‑fitting 
-- Seamless integration with both forex and index modules 
-- Designed to avoid noise‑driven exits and maintain structural integrity 
-
-The trend module activates **only after a session entry is triggered**, and is engineered to capture extended movement when volatility supports it — without sacrificing reproducibility or control.
-
----
-
-### **3. Index Module**
+### **2. Index Module**
 
 The index modules extend the architecture with symbol‑specific logic for high‑volatility markets such as **US30** and **DAX40**.  
 They follow the same deterministic principles as the forex modules but introduce several behaviours tailored to index dynamics:
@@ -76,6 +54,29 @@ This empirical foundation directly inspired the development of:
 The index modules therefore serve as both a **practical trading component** and a **research driver** within the architecture.
 
 ---
+
+### **3. Trend Module**
+
+The trend module extends the session module with a structured, two‑position architecture designed to capture both immediate movement and extended trends. 
+
+Core features: 
+- **Two independent positions** (TP‑leg and trend‑leg) 
+- **Split‑risk allocation** with deterministic sizing 
+- **Structural trailing logic** based on break‑of‑structure (BOS) events 
+- **5‑minute update cycle** for controlled, non‑reactive adjustments 
+- **Fallback validation** to ensure safe state transitions 
+- **ADX‑based contextual logging** (context only, not decision‑making) 
+
+Technical characteristics: 
+- Fully deterministic trailing behaviour 
+- Symbol‑agnostic logic that adapts to volatility without curve‑fitting 
+- Seamless integration with both forex and index modules 
+- Designed to avoid noise‑driven exits and maintain structural integrity 
+
+The trend module activates **only after a session entry is triggered**, and is engineered to capture extended movement when volatility supports it — without sacrificing reproducibility or control.
+
+---
+
 
 ### **4. Backtesting Engine**
 
