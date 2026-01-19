@@ -1,7 +1,7 @@
 # Session Module
 
 The session module is responsible for all initial trade execution.  
-It is designed for deterministic behavior, minimal configuration, and scalable multi‑symbol operation.
+It is designed for **deterministic behaviour**, **minimal configuration**, and **scalable multi‑symbol operation**.
 
 ---
 
@@ -17,11 +17,14 @@ The premarket range is used for:
 - lot size calculation  
 - risk allocation  
 
+---
+
 ## Pending Order Placement
 
-### Live Example (Video) [▶️ Watch Live Pending Order Placement and Trade Activation](https://youtube.com/shorts/jnR44ETgoQU?si=elL8LvxRfz8N1O_V)
+### Live Example (Video)  
+[▶️ Watch Live Pending Order Placement and Trade Activation](https://youtube.com/shorts/jnR44ETgoQU?si=elL8LvxRfz8N1O_V)
 
-This video demonstrates how the Session Module places all pending orders simultaneously at the session timestamp based on the Daily Trade List input field.
+This video demonstrates how the Session Module places all pending orders simultaneously at the session timestamp based on the Daily Trade List input field.  
 It also shows three of the pending orders being triggered during the recording, providing a real‑time example of how the EA transitions from order placement to active trade management with a precise 1:1 risk‑to‑reward structure.
 
 The module supports all four pending order types:
@@ -40,7 +43,8 @@ Examples:
 XAUUSD:STOP;
 NAS100:LIMIT;
 
-This allows the system to run multiple symbols with different order behaviors using a single configuration string.
+
+This allows the system to run multiple symbols with different order behaviours using a single configuration string.
 
 ---
 
@@ -53,7 +57,7 @@ At the moment the premarket session ends, the system evaluates the EMA condition
 - If `OrderType = LIMIT` and `EMA_fast > EMA_slow` → **Sell Limit**  
 - If `OrderType = LIMIT` and `EMA_fast < EMA_slow` → **Buy Limit**  
 
-This ensures deterministic behavior without requiring the user to manually select the specific pending order.
+This ensures **deterministic behaviour** without requiring the user to manually select the specific pending order.
 
 ---
 
@@ -71,13 +75,13 @@ This provides:
 STOP orders target **momentum continuation**.  
 LIMIT orders target **mean‑reversion entries**.
 
-Both are driven by the same EMA‑based directional bias, ensuring consistent logic across execution styles.
+Both are driven by the same **EMA‑based directional bias**, ensuring consistent logic across execution styles.
 
 ---
 
 ## Risk and Position Sizing
 
-Risk is defined **per trade in USD**, via a user input field: 
+Risk is defined **per trade in USD**, via a user input field:
 
 RiskPerTradeUSD = X
 
@@ -93,6 +97,7 @@ There is **no percentage‑based risk model**.
 ```python
 LotSize = RiskPerTradeUSD / (RangeInPips * PipValue)
 ```
+
 This makes the system:
 
 - deterministic  
@@ -110,14 +115,14 @@ EURUSD:STOP;BTCUSD:LIMIT;UK100:STOP;
 
 …with **no change in logic**.
 
-There is no upper limit on the number of symbols.
+There is **no upper limit** on the number of symbols.
 Each symbol runs its own independent:
 
 - premarket calculation
 - pending order logic
 - risk model
 
-This design makes the module fully scalable from 1 symbol to dozens of symbols without any change in logic.
+This design makes the module fully scalable from **1 symbol to dozens** of symbols without any change in logic.
 
 ---
 

@@ -7,7 +7,7 @@ Unlike the multi‑symbol forex architecture, each index EA is attached directly
 This design reflects the unique behaviour of index markets, where volatility, session transitions, and structural ranges differ significantly from forex.
 
 The module follows the same architectural principles as the rest of the framework:  
-deterministic logic, clear state transitions, reproducible behaviour, and transparent logging.
+**deterministic logic**, **clear state transitions**, **reproducible behaviour**, and **transparent logging**.
 
 ---
 
@@ -18,7 +18,7 @@ This creates a consistent and repeatable entry structure:
 
 - the premarket window defines the range  
 - the EA calculates risk and order distance from that range  
-- pending orders are placed at a fixed time  
+- pending orders are placed at a fixed timestamp  
 - execution is isolated to the symbol on which the EA is running  
 
 This ensures that each index EA behaves identically every day, without cross‑symbol dependencies.
@@ -43,8 +43,13 @@ A lower reward level is used here, based on historically high hit‑rates for sy
 When the market opens, volatility increases sharply.  
 At this moment, the EA switches to a **higher reward level**, reflecting the increased probability of extended movement.
 
-These reward levels are **weekday‑specific** and **symbol‑specific**, derived from multi‑year historical data.  
-The goal is to select the reward level that historically represents the “most probable” or “best expected outcome” for that particular weekday and symbol.
+These reward levels are:
+
+- **weekday‑specific**  
+- **symbol‑specific**  
+- **empirically validated across multiple years**  
+
+The goal is to select the reward level that historically represents the **most probable outcome** for that particular weekday and symbol.
 
 ---
 
@@ -57,7 +62,10 @@ When enabled, the EA splits the position into:
 - **a TP‑leg**, targeting the statistically validated reward level for the day  
 - **a Trend‑leg**, which follows market structure using the same trailing, fallback, and validation logic as the main Trend Module  
 
-This allows index strategies to benefit from both the high hit‑rate reward levels and the potential for extended movement during high‑volatility sessions.
+This allows index strategies to benefit from both:
+
+- high hit‑rate reward levels  
+- extended movement during high‑volatility sessions  
 
 ### Activation via Input Field
 
@@ -65,17 +73,17 @@ Trend functionality is controlled through a simple input field that defines, **w
 
 This makes it possible to:
 
-- enable trend behaviour only on days where historical data supports it  
+- enable trend behaviour only on statistically favourable days  
 - disable it on days where extended movement is less likely  
 - maintain deterministic behaviour without modifying the code  
 
-The integration is optional, lightweight, and fully consistent with the deterministic and modular design principles of the framework.
+The integration is optional, lightweight, and fully consistent with the **modular and deterministic** design principles of the framework.
 
 ---
 
 ## Empirical Foundation
 
-The entire reward system is based on statistical evidence.  
+The entire reward system is based on **statistical evidence**.  
 In my research, lower reward structures (e.g., 0.4:1) have shown very high hit‑rates on certain indices.  
 This insight led to the development of a custom Python backtester to validate:
 
@@ -84,7 +92,7 @@ This insight led to the development of a custom Python backtester to validate:
 - volatility‑dependent edges  
 - premarket vs open market dynamics  
 
-The module is only expanded when a pattern repeats consistently across multiple years of data.
+The module is only expanded when a pattern repeats **consistently across multiple years of data**.
 
 ---
 
