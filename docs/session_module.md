@@ -127,7 +127,7 @@ This design makes the module fully scalable from **1 symbol to dozens** of symbo
 Configuration, daily symbol selection, and dashboard visualization are
 documented separately in:
 
-**/docs/operational_interface.md**
+[Operational Interface – Inputs & Dashboard](operational_interface.md)
 
 ---
 

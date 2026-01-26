@@ -173,6 +173,7 @@ backtester.md
 risk_model.md
 inputs_overview.md
 logging_and_debugging.md
+operational_interface.md
 
 /docs/examples         → Strategy examples, logs, walkthroughs
 ```
