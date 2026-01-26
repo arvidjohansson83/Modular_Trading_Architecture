@@ -124,6 +124,11 @@ Each symbol runs its own independent:
 
 This design makes the module fully scalable from **1 symbol to dozens** of symbols without any change in logic.
 
+Configuration, daily symbol selection, and dashboard visualization are
+documented separately in:
+
+**/docs/operational_interface.md**
+
 ---
 
 ## Reward Logic
